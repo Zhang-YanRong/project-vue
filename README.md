@@ -1,24 +1,5 @@
-# project-vue
+## 期待功能
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- [] Element UI
+- [] less/sass
+- [] 首页-用户模块，最近登录时间，登录地点，用户权限，用户基本信息
