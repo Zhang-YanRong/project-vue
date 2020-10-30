@@ -17,11 +17,16 @@ export default new Router({
           path: "/dashboard",
           component: () => import("../page/DashBoard"),
         },
+        {
+          path: "/classify",
+          component: () => import("../page/Classify"),
+        },
       ],
     },
     {
       path: "/login",
       component: () => import("../page/Login"),
     },
+    
   ],
 });

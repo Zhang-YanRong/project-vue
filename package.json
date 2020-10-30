@@ -11,6 +11,8 @@
     "core-js": "^3.6.5",
     "element-ui": "^2.4.5",
     "koa-better-body": "^3.3.9",
+    "less": "^3.12.2",
+    "less-loader": "^7.0.2",
     "vue": "^2.6.11",
     "vue-router": "^3.4.8"
   },

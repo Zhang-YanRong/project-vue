@@ -2,6 +2,7 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./route";
 import ElementUI from "element-ui";
+import './assets/css/icon.css';
 import "./plugins/element.js";
 
 Vue.config.productionTip = false;
