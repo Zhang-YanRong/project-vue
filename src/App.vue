@@ -1,11 +1,3 @@
-<!--
- * @Author: your name
- * @Date: 2020-10-22 17:14:47
- * @LastEditTime: 2020-10-22 17:49:13
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: /project-vue/src/App.vue
--->
 <template>
 <div id="app">
     <keep-alive>
@@ -18,7 +10,7 @@
 export default {
     name: "app",
     components: {},
-};
+}
 </script>
 
 <style>
@@ -30,5 +22,13 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
 }
 </style>

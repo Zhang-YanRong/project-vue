@@ -1,7 +1,7 @@
 <template>
-<el-dialog :title="`${editFlag ? '编辑' : '新增'}分类`" :visible="visible">
-    <el-form :model="editItem" :rules="rules" ref='editModal'>
-        <el-form-item label="分类名称" label-width="120px">
+<el-dialog :title="`${editFlag ? '编辑' : '新增'}分类`" :visible="visible" @close="closeModal">
+    <el-form :model="editItem" :rules="rules" ref="editModal">
+        <el-form-item label="分类名称" label-width="120px" prop="classifyName">
             <el-input v-model="editItem.classifyName" autocomplete="off"></el-input>
         </el-form-item>
     </el-form>
@@ -19,10 +19,9 @@ export default {
             rules: {
                 classifyName: [{
                     required: true,
-                    message: "请输入分类名称"
-                }]
-            }
-
+                    message: "请输入分类名称",
+                }, ],
+            },
         }
     },
     props: {
@@ -33,25 +32,27 @@ export default {
     methods: {
         closeModal() {
             this.$emit("updataState", {
-                visible: false
+                visible: false,
             })
         },
         confirmModal() {
-            this.$refs.editModal.validate((valid) => {
+            this.$refs["editModal"].validate((valid) => {
                 if (valid) {
-                    console.log(this.editItem);
                     this.closeModal()
-                    this.$emit('updataState', {
-                        editItem: this.editItem,
-                    })
+                    if (this.editFlag) {
+                        this.$emit("updataState", {
+                            editItem: this.editItem,
+                        })
+                    } else {
+                        this.$emit("addItem", {
+                            ...this.editItem,
+                        })
+                    }
                 }
             })
-            // this.visible = false
-        }
+        },
     },
 
-    computed: {
-
-    }
+    computed: {},
 }
 </script>

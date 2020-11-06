@@ -3,7 +3,6 @@
     <!-- 用户模块 -->
     <el-card class="user-content" shadow="hover">
         <div class="user-info">
-            <!-- <img src="../../assets/img/img.jpg" class="user-avator" alt /> -->
             <div class="user-info-cont">
                 <div class="user-info-name">小花</div>
                 <div>主管理员</div>
